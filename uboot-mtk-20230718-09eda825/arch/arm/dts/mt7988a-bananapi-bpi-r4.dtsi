@@ -75,7 +75,7 @@
 	status = "okay";
 };
 
-&eth0 {
+&eth {
 	status = "okay";
 	mediatek,gmac-id = <0>;
 	phy-mode = "usxgmii";
