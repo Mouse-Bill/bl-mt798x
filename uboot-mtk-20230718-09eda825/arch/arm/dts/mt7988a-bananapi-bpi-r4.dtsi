@@ -88,72 +88,7 @@
 	};
 };
 
-&pio {
-	i2c1_pins: i2c1-pins {
-		mux {
-			function = "i2c";
-			groups = "i2c1_0";
-		};
-	};
 
-	pwm_pins: pwm-pins {
-		mux {
-			function = "pwm";
-			groups = "pwm0", "pwm1", "pwm2", "pwm3", "pwm4",
-				 "pwm5", "pwm6", "pwm7";
-		};
-	};
-
-	spi0_pins: spi0-pins {
-		mux {
-			function = "spi";
-			groups = "spi0", "spi0_wp_hold";
-		};
-	};
-
-	mmc0_pins_default: mmc0default {
-		mux {
-			function = "flash";
-			groups =  "emmc_51";
-		};
-
-		conf-cmd-dat {
-			pins = "EMMC_DATA_0", "EMMC_DATA_1", "EMMC_DATA_2",
-			       "EMMC_DATA_3", "EMMC_DATA_4", "EMMC_DATA_5",
-			       "EMMC_DATA_6", "EMMC_DATA_7", "EMMC_CMD";
-			input-enable;
-		};
-
-		conf-clk {
-			pins = "EMMC_CK";
-		};
-
-		conf-dsl {
-			pins = "EMMC_DSL";
-		};
-
-		conf-rst {
-			pins = "EMMC_RSTB";
-		};
-	};
-
-	mmc1_pins_default: mmc1default {
-		mux {
-			function = "flash";
-			groups =  "emmc_45";
-		};
-
-		conf-cmd-dat {
-			pins = "SPI2_CSB", "SPI2_MISO", "SPI2_MOSI",
-			       "SPI2_CLK", "SPI2_HOLD";
-			input-enable;
-		};
-
-		conf-clk {
-			pins = "SPI2_WP";
-		};
-	};
-};
 
 &pwm {
 	pinctrl-names = "default";
